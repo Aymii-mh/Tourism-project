@@ -28,11 +28,16 @@ body{
     display: flex;
 }
 
+#logo-display{
+    width: 20%;
+    padding: 23px;
+}
+
 #links{
     display: flex;
     justify-content: space-evenly;
     padding: 23px;
-    width: 65%;
+    width: 100%;
 }
 
 #links a{
@@ -74,29 +79,6 @@ body{
 
 #dropdown-links:hover{
     background-color: rgba(0, 0, 0, 0.459);
-}
-
-#social-section{
-    width: 15%;
-    margin-left: 14%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#social img{
-    width: 36px;
-    cursor: pointer;
-}
-
-#insta{
-    margin-top: 12px;
-}
-#whatsapp{
-    margin-top: 8px;
-}
-#x{
-    margin-top: 8px;
-    border-radius: 8px;
 }
 
 .heading{
