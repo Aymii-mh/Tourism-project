@@ -49,14 +49,15 @@ body{
 }
 
 #dropdown{
-    display: inline-block;
     position: relative;
 }
 
 #dropdown-content{
-    display: none;
+    opacity: 0;
     overflow: visible;
     position: absolute;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-out;
 }
 
 #dropdown-content a{
@@ -65,7 +66,8 @@ body{
 }
 
 #dropdown:hover #dropdown-content{
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #dropdown-links{
