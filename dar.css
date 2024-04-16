@@ -6,13 +6,18 @@
 
 .main-content{
     /* border: 1px solid black; */
-    height: 650px;
-    padding: 4%;
+    height: 880px;
+    background-color: #11352b;
 }
 
 .upper-data{
     /* border: 1px solid black; */
     height: 122px;
+    background-color: #124436ee;
+    text-align: center;
+    font-size: larger;
+    color: azure;
+    padding: 34px;
 }
 
 .boxes{
