@@ -21,14 +21,20 @@
 }
 
 .boxes{
-    /* border: 1px solid black; */
-    height: 450px;
+    border: 1px solid black;
+    height: 641px;
     display: flex;
+    padding: 5%;
 }
 
 #left-part{
     /* border: 1px solid black; */
     flex: 1;
+}
+
+#left-img{
+    width: 720px;
+    height: 535px;
 }
 
 #right-part{
@@ -49,4 +55,9 @@
 #small-box{
     /* border: 1px solid black; */
     flex: 1;
+}
+
+#box-img{
+    width: 350px;
+    height: 230px;
 }
