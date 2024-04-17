@@ -21,7 +21,7 @@
 }
 
 .boxes{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 641px;
     display: flex;
     padding: 5%;
@@ -40,16 +40,18 @@
 #right-part{
     /* border: 1px solid black; */
     flex: 1;
-    display: flex;
-    flex-direction: column;
     padding-left: 62px;
 }
 
 #right-part-small{
     /* border: 1px solid black; */
-    flex: 1;
     display: flex;
-    justify-content: space-around;
+}
+
+#right-part-small-bottom{
+    display: flex;
+    margin-top: 68px;
+
 }
 
 #small-box{
