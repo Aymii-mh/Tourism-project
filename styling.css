@@ -205,7 +205,7 @@ h1{
 /* Responsive Media Queries */
 
 /* Tablet Screen (768px and below) */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .first-section {
         height: 600px;
     }
