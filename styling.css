@@ -1,96 +1,95 @@
-/* genral styling */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans Tc', sans-serif;
 }
 
-/* the top layer of the website */
-.starting-section{
+.first-section{
     height:900px;
     background-image: url("pics/tz-main.png");
     background-repeat: no-repeat;
     background-size: cover;
+    color: aliceblue;
 }
-.link-section{
-    background-color: rgba(0, 0, 0, 0.315);
-    height: 100px;
-    padding-top: 12px;
+
+/* navigation section */
+.first-section nav{
     display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.349);
 }
 
-#logo-display{
-    width: 20%;
-    padding: 23px;
-    font-size: 26px;
+#head{
+    font-size: 50px;
+    font-weight: 800;
+    padding: 22px;
+    flex: 1;
 }
-
 #links{
+    flex: 1;
     display: flex;
-    justify-content: space-evenly;
-    padding: 23px;
-    width: 100%;
+    padding: 46px 40px;
+    justify-content: space-between;
 }
-
 #links a{
     text-decoration: none;
-    color: whitesmoke;
-    font-size: 26px;
-    font-weight: 600;
-    cursor: pointer;
+    font-size: 20px;
+    color: aliceblue;
+
 }
 
 #dropdown{
     position: relative;
 }
-
 #dropdown-content{
     opacity: 0;
     overflow: visible;
     position: absolute;
     transform: translateY(-100%);
+    width: 130px;
     transition: all 0.3s ease-out;
 }
-
 #dropdown-content a{
-    font-size: 18px;
+    font-size: 16px;
     display: block;
 }
-
 #dropdown:hover #dropdown-content{
     opacity: 1;
     transform: translateY(0);
 }
-
-#dropdown-links{
-    background-color: rgba(0, 0, 0, 0.205);
+#dropdown-content a{
+    background-color: rgba(0, 0, 0, 0.336);
     margin-top: 1px;
     transition: 0.55s;
-    margin-left: -28px;
-    width: 146px;
     padding: 4px;
 }
 
-#dropdown-links:hover{
-    background-color: rgba(0, 0, 0, 0.459);
+#dropdown-content a:hover{
+    background-color: rgba(0, 0, 0, 0.61);
 }
 
-.heading{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 250px;
-    color: aliceblue;
-    font-size: 220px;
-    font-weight: 1000;
+section h1 {
+    font-size: 19vw;
+    overflow: hidden;
+    border-right: 2px solid black;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(500, end) forwards, blink-caret 0.15s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
 }
 
-.sentence{
-    color: aliceblue;
-    font-size: 28px;
-    font-weight: 700;
-    margin-left: 90px;
+h3{
+    font-size: x-large;
+    text-align: center;
 }
-
 /* the cities image slider section */
 #slider-title{
     color: rgb(0, 0, 0);
@@ -104,43 +103,51 @@
     font-weight: 900;
 }
 
-.cities-slider #slider-links #pics-slider {
-    width: 142px;
-    height: 552px;
-    margin-right: 1%;;
-    transition: all 0.65s ease-in-out;
-}
-
-.cities-slider #slider-links #pics-slider:hover {
-    width: 1000px;
-    margin-right: 0;
-}
-
-.cities-slider #slider-links #pics-slider:first-child:hover {
-    margin-left: 0;
-}
-
-.cities-slider #slider-links #pics-slider:last-child:hover {
-    margin-right: 0;
-}
-
-.cities-slider #slider-links #pics-slider img {
-    width: 100%;
-    height: 549px;
-    object-fit: cover;
-}
-
-.cities-slider #slider-links {
+#slider-links{
+    /* border:1px solid black; */
+    height: 600px;
+    margin: auto;
     display: flex;
     justify-content: center;
-    overflow-x: scroll;
 }
-.cities-slider #slider-links::-webkit-scrollbar {
-    display: none;/* Hide scrollbar for Chrome, Safari, and Opera */
+#pics-slider{
+    width: 142px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 60px;
+    margin: 12px 20px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
 }
+#slider-text {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 900;
+    color: aliceblue;
+    opacity: 0;
+    transition: all 0.85s  ease-in-out;
+
+}
+
 #slides{
-    border-radius: 48px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    object-fit: cover;
 }
+/* hovering effect */
+#pics-slider:hover{
+    width: 1000px;
+}
+#pics-slider:hover #slider-text{
+    opacity: 1;
+    font-size: 70px;
+}
+
 
 /* remaining section the page */
 .country-info{
@@ -201,7 +208,106 @@ h1{
 }
 
 #follow-footer{
-    width: 60px;
+    width: 40px;
     margin: 22px;
     cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 60px;
+        margin-top: 100px;
+    }
+
+    .sentence {
+        font-size: 16px;
+    }
+
+    #cities {
+        font-size: 40px;
+    }
+
+    #slider-links {
+        height: 300px;
+    }
+
+    #pics-slider {
+        width: 70px;
+        margin: 0 5px;
+    }
+
+    #slider-text {
+        font-size: 8px;
+    }
+
+    #pics-slider:hover #slider-text {
+        font-size: 20px;
+    }
+
+    .country-info {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    #about-img {
+        max-width: 300px;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+/* Mobile Screen (480px and below) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 40px;
+        margin-top: 80px;
+    }
+
+    .sentence {
+        font-size: 14px;
+    }
+
+    #cities {
+        font-size: 30px;
+    }
+
+    #slider-links {
+        height: 200px;
+    }
+
+    #pics-slider {
+        width: 60px;
+        margin: 0 3px;
+    }
+
+    #slider-text {
+        font-size: 6px;
+    }
+
+    #pics-slider:hover #slider-text {
+        font-size: 16px;
+    }
+
+    .country-info {
+        font-size: 16px;
+    }
+
+    #info {
+        font-size: 18px;
+    }
+
+    #about-img {
+        max-width: 250px;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
 }
