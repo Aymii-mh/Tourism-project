@@ -215,17 +215,21 @@ h1{
 
 
 @media (max-width: 768px) {
-    .heading {
+    section h1 {
         font-size: 60px;
         margin-top: 100px;
     }
 
-    .sentence {
+    section h3 {
         font-size: 16px;
     }
 
     #cities {
         font-size: 40px;
+    }
+
+    #info{
+        font-size: 30px;
     }
 
     #slider-links {
@@ -246,7 +250,7 @@ h1{
     }
 
     .country-info {
-        font-size: 18px;
+        font-size: 14px;
         padding: 20px;
     }
 
@@ -263,17 +267,21 @@ h1{
 
 /* Mobile Screen (480px and below) */
 @media (max-width: 480px) {
-    .heading {
+    section h1 {
         font-size: 40px;
         margin-top: 80px;
     }
 
-    .sentence {
-        font-size: 14px;
+    section h3 {
+        font-size: 12px;
     }
 
     #cities {
         font-size: 30px;
+    }
+
+    #info{
+        font-size: 12px;
     }
 
     #slider-links {
@@ -294,11 +302,11 @@ h1{
     }
 
     .country-info {
-        font-size: 16px;
+        font-size: 10px;
     }
 
     #info {
-        font-size: 18px;
+        font-size: 12px;
     }
 
     #about-img {
