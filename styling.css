@@ -251,7 +251,7 @@ h1{
 
     .country-info {
         font-size: 14px;
-        padding: 20px;
+        padding: 8px;
     }
 
     #about-img {
@@ -261,12 +261,15 @@ h1{
     .footer {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        padding: 10px;
     }
 }
 
 /* Mobile Screen (480px and below) */
 @media (max-width: 480px) {
+    *{
+        padding: 8px;
+    }
     section h1 {
         font-size: 40px;
         margin-top: 80px;
@@ -315,7 +318,6 @@ h1{
 
     .footer {
         width: 100%;
-        padding: 10px;
         flex-direction: column;
     }
 }
