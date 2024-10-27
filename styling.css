@@ -197,50 +197,63 @@ h1{
     height: 400px;
 }
 
-#left-footer{
-    width: 35%;
-    padding: 60px;
-}
-
-#right-footer{
-    width: 45%;
-    padding: 50px;
-}
-
 #follow-footer{
     width: 40px;
     margin: 22px;
     cursor: pointer;
 }
+/* Responsive Media Queries */
 
-
+/* Tablet Screen (768px and below) */
 @media (max-width: 768px) {
-    *{
-        padding: 8px;
+    .first-section {
+        height: 600px;
     }
-    section h1 {
-        font-size: 60px;
-        margin-top: 100px;
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
 
-    section h3 {
-        font-size: 16px;
+    #head {
+        font-size: 32px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #links {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #links a {
+        font-size: 18px;
+    }
+
+    section h1 {
+        font-size: 16vw;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 20px;
     }
 
     #cities {
-        font-size: 40px;
-    }
-
-    #info{
-        font-size: 30px;
+        font-size: 50px;
     }
 
     #slider-links {
-        height: 300px;
+        height: 400px;
+        padding: 10px;
+        margin: 20px auto;
     }
 
     #pics-slider {
-        width: 70px;
+        width: 90px;
         margin: 0 5px;
     }
 
@@ -248,52 +261,82 @@ h1{
         font-size: 8px;
     }
 
-    #pics-slider:hover #slider-text {
-        font-size: 20px;
+    .country-info {
+        font-size: 18px;
+        padding: 20px;
+        margin: 20px 0;
     }
 
-    .country-info {
-        font-size: 14px;
+    #info {
+        font-size: 20px;
+        margin: 20px;
     }
 
     #about-img {
-        max-width: 300px;
+        max-width: 100%;
+        width: 300px;
+        height: auto;
+        border-radius: 150px;
     }
 
     .footer {
         flex-direction: column;
-        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
     }
 }
 
 /* Mobile Screen (480px and below) */
 @media (max-width: 480px) {
-    *{
-        padding: 8px;
-    }
-    section h1 {
-        font-size: 40px;
-        margin-top: 80px;
+    .first-section {
+        height: 500px;
+        padding: 10px;
     }
 
-    section h3 {
-        font-size: 12px;
+    nav {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    #head {
+        font-size: 28px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #links {
+        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+    }
+
+    #links a {
+        font-size: 16px;
+    }
+
+    section h1 {
+        font-size: 12vw;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin: 10px;
     }
 
     #cities {
-        font-size: 30px;
-    }
-
-    #info{
-        font-size: 12px;
+        font-size: 28px;
     }
 
     #slider-links {
-        height: 200px;
+        height: 250px;
+        padding: 5px;
     }
 
     #pics-slider {
-        width: 60px;
+        width: 70px;
         margin: 0 3px;
     }
 
@@ -301,24 +344,34 @@ h1{
         font-size: 6px;
     }
 
-    #pics-slider:hover #slider-text {
-        font-size: 16px;
-    }
-
     .country-info {
-        font-size: 10px;
+        font-size: 14px;
+        padding: 10px;
     }
 
     #info {
-        font-size: 12px;
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px;
     }
 
     #about-img {
+        width: 100%;
         max-width: 250px;
+        height: auto;
+        border-radius: 150px;
     }
 
     .footer {
         width: 100%;
-        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+    }
+
+    /* Additional adjustments to remove extra padding and center content */
+    .first-section, .country-info, .footer, #info {
+        margin: 0 auto;
+        padding: 0 5px;
+        width: 90%;
     }
 }
